@@ -3,7 +3,7 @@ while c < 10:
     print(c)
     c += 1
 print('FIM')'''
-resposta = 's'
-while resposta == 's':
+resposta = 's'  # Iniciando a vaipavel resposta
+while resposta == 's':  # Enquanto resposta for igual a 's':
     numero = int(input('Digite um número: '))
-    resposta = str(input('Deseja continuar [S/N]: ')).lower()
+    resposta = str(input('Deseja continuar [S/N]: ')).lower().strip()[0]
