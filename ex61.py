@@ -3,9 +3,9 @@ print(f'''{'=' * 27}
 {'=' * 27}''')
 primeiro_termo = int(input('Primeiro termo: '))
 razao = int(input('Razão: '))
-termos = 1
-while termos <= 10:
-    print(primeiro_termo, end='-> ')
-    primeiro_termo += razao
-    termos += 1
+termos = 1  # Iniciando a variável termos
+while termos <= 10:  # Enquanto termos for menor ou igual a 10:
+    print(primeiro_termo, end='-> ')  # Definindo o fim como '-> '
+    primeiro_termo += razao  # Primeiro termo mais razão
+    termos += 1  # Termos mais um
 print('ACABOU')
