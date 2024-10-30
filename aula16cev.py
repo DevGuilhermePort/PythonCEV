@@ -1,0 +1,11 @@
+lanche = ('Hamburguer', 'Suco', 'Pizza', 'Pudim', 'Batata frita')  # Criando uma tupla
+for comida in lanche:  # Mostrar cada item na tupla dentro do indicie da variável de controle
+    print(comida, end=' -> ')
+print('\n')  # Quebrando a linha
+
+for cont in range(0, len(lanche)):  # Criando um loop no renge de zero até o len de lanche
+    print(lanche[cont], end=' -> ')  # Fatiar um item da tupla no indicie do contador
+print('\n')
+
+for posicao, comida in enumerate(lanche):  # Indicado para usar quado precisa mostrar a posição do elemento.
+    print(f'{comida}-{posicao}', end=' -> ')
