@@ -11,8 +11,8 @@ for posicao, comida in enumerate(lanche):  # Indicado para usar quando precisa m
     print(f'{comida}-{posicao}', end=' -> ')
 print('\n')
 
-a = (4, 5, 4, 8, 9)
-b = (2, 3, 2, 4, 5)
+a = (1, 2, 3)
+b = (4, 5, 6)
 c = a + b  # Irá concatenar o a no b
 d = b + a  # Irá concatenas o b no a
 print(f'{c}\n{d}')
