@@ -1,7 +1,7 @@
-numeros = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
-escolha = int(input('Digite um número entre 0 e 20: '))
-while True:
-    if escolha >= 0 and escolha <= 20:
-        break
-    escolha = int(input('Tente novamente. Digite umnúmero entre 0 e 20: '))
-print(f'Você digitou o número {numeros[escolha]}')
+numeros = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')  # Criando a tupla com os números escritos por extenso
+escolha = int(input('Digite um número entre 0 e 20: '))  # Perguntando o número para o jogador
+while True:  # Enquanto for verdadeiro:
+    if escolha >= 0 and escolha <= 20:  # Se a escolha for maior ou igual a zero e menor ou igual a 20:
+        break  # Quebre o loop
+    escolha = int(input('Tente novamente. Digite um número entre 0 e 20: '))  # Perguntando de novo
+print(f'Você digitou o número {numeros[escolha]}')  # Escrevendo a respota por extenso
