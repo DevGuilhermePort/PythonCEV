@@ -1,8 +1,8 @@
-from random import choices
+from random import randint  # Importando a função randint da biblíoteca random
 
-numeros = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-aleatorios = (choices(numeros, k = 5))
-print(f'Os valores sorteados foram: {aleatorios}')
-
-if int(aleatorios[0]) > int(aleatorios[1:]):
-    print(f'O menor valor é {aleatorios[0]}')
+numeros = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))  # Criando a tupla com 5 números aleatórios de 1 a 10
+print('Os números sorteados foram: ', end='')
+for numero in numeros:  # Para cada numero em número:
+    print(f'{numero} ', end='')
+print(f'\nO maior valor sorteado foi: {max(numeros)}')  # A função max retorna o maior valor de uma sequência ou conjunto de valores
+print(f'O menor valor sorteado foi: {min(numeros)}')  # A função min retorna o menor valor de uma sequência ou conjunto de valores
