@@ -12,5 +12,8 @@ while True:  # Enquanto for verdadeiro
         continuar = str(input('Tente novamente. Quer continuar? [S/N] ')).strip().upper()[0]  # Perguntar se quer continuar, tirar todos os espaços na frente e atrás, passar para o maiúsculo e pegar apenas o indicie zero
      if continuar == 'N':  # Se continuar for igual a não:
             break  # Quebre o loop
+     
+lista.sort()
+
 print({'-='  * 20})
 print(f'Você digitou os os valores {lista}')  # Lista dos dados
