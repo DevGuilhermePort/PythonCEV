@@ -7,7 +7,7 @@ while True:  # Enquanto for verdadeiro
      else:  # Se não:
          print('Valor duplicado! Não vou adicionar.')  # Falar que já possui o número
 
-     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]  # Perguntar se quer continuar, tirar todos os espaços na frente e atrás, passar para o maiúsculo e pegar apenas o indicie zero
+     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]  # Perguntar se quer continuar, tirar todos os espaços na frente e atrás, passar para o maiúsculo e pegar apenas o índici zero
      while continuar not in 'SN':
         continuar = str(input('Tente novamente. Quer continuar? [S/N] ')).strip().upper()[0]  # Perguntar se quer continuar, tirar todos os espaços na frente e atrás, passar para o maiúsculo e pegar apenas o indicie zero
      if continuar == 'N':  # Se continuar for igual a não:
