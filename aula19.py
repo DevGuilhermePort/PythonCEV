@@ -1,17 +1,9 @@
-lista = {'nome': 'Melissa', 'sexo': 'F', 'idade': 19}
-print(lista)
+dicionario = {'nome': 'Melissa', 'sexo': 'F', 'idade': 19}
+print(f'A {dicionario['nome']} tem {dicionario['idade']} anos.')
 
-lista['samaho'] = 1.60
-print(lista)
+dicionario['tamanho'] = 1.60
+print(dicionario.values())
 
-del lista['tamanho']
-print(lista)
+del dicionario['tamanho']
+print(dicionario.values())
 
-brasil = []
-estado1 = {'uf': 'Rio de Janeiro', 'sigla': 'RJ'}
-estado2 = {'uf': 'São Paulo', 'sigla': 'SP'}
-brasil.append(estado1)
-brasil.append(estado2)
-print(brasil)
-print(brasil[0]['sigla'])
-print(brasil[1]['uf'])
