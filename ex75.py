@@ -6,7 +6,11 @@ numeros = (int(input('Digite um número: ')),
 print(f'Você digitou os valores: {numeros}')
 
 print(f'O valor 9 apareceu {numeros.count(9)} vezes')  # Usando o método count para contar quantas vezes 9 pareceus na tupla
-print(f'o valor 3 apareceu na {numeros.index(3)} posição')  # Usando o método index para ver onde foi a primeira incidência do número 3
+
+if 3 in numeros:
+    print(f'o valor 3 apareceu na {numeros.index(3) + 1} posição')  # Usando o método index para ver onde foi a primeira incidência do número 3
+else:
+    print('O valor 3 não foi digitado em nenhuma posição')
 print(f'Os valores pares digitados foram', end=' ')  # Substituindo a quebra de linha por um espaço
 
 for numero in numeros:  # Para cada 'numero' in 'números':
