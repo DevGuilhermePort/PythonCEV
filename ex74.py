@@ -1,23 +1,22 @@
-from random import choices  # Importando o método choices da biblíoteca random
+from random import randint  # Importando a função randint da biblíoteaca random
 
-numeros = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  # Criando a tupla com os números de 0 a 10
+numeros = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))  # Colocando 5 números aleatórios entre 0 e 10 dentro da tupla
 
-sorteados = (choices(numeros, k=5))  # Escolhendo 5 números aleatórios dessa tupla e os atribuindo a outra tupla
+print('Os valores sorteados foram: ', end=' ')  # Transformando a quebra de linha do final em um espaço
 
-print('Os valores sorteados foram: ', end=' ')  # Mostrando na tela a saída de dados
-
-for pos, numero in enumerate(sorteados):  # A posição e o item dentro de cada indicie da variável composta 'sorteados'
-    if pos == len(sorteados) - 1:  # Se a posição for igual ao len de sorteados menos um:
-        print(numero)  # Mostre o numero na tela
+for numero in numeros:  # Para cada 'numero' em 'numeros': 
+    if numero == numeros[len(numeros) - 1]:  # Se o 'numero' for igual à 'numeros' na última posição:
+        print(numero)  # Mostre 'numero' na tela
     else:  # Se não:
-        print(numero, end=' ')  # Mostre o numero na tela e troque o fim por um espaço
-    if pos == 0:  # Se a pos for igual a 0:
-        maior = menor = numero  # Maior e menor passam a ser numero
-    else:  # Se não:
-        if numero > maior:  # Se numero for maior que maior:
-            maior = numero  # Maior passa a ser número
-        if numero < menor:  # Se numero for menor que menor:
-            menor = numero  # Menor passa a ser numero
+        print(numero, end=' ')  # Mostre 'numero' na tela e troque a quebra de linha final por um espaço
 
-print(f'O maior valor sorteado foi {maior}.')  # Mostrar na tela o maior
-print(f'O menor valor sorteado foi {menor}.')  # Mostrar na tela o menor
+    if numero == numeros[0]:  # Se 'numero' for igual a 'numeros' na posição 0:
+        maior = menor = numero  # Criar as variáveis 'maior' e 'menor' e atribuir à ambas o valor de 'numero'
+    else:  # Se não:
+        if numero > maior:  # Se 'numero' for maior que 'maior':
+            maior = numero  # 'maior' passa a ser 'numero'
+        elif numero < menor:  # Se não, se 'numero' for menor que 'menor':
+            menor = numero  # 'menor' passa a ser 'numero'
+
+print(f'O maior valor sorteado foi: {maior}')
+print(f'O menor valor sorteado foi: {menor}')
