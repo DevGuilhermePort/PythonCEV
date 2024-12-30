@@ -1,20 +1,20 @@
-numeros = []
+numeros = []  # Criando a lista vazia 'numeros'
 
-while True:
-    numeros.append(int(input('Digite um valor: ')))
+while True:  # Loop infinito
+    numeros.append(int(input('Digite um valor: ')))  # Adicionando a entrada do usuáio na lista
     
-    continuar = str(input('Quer continuar? [S/N] ')).strip().lower()[0]
-    while continuar not in 'sn':
-        continuar = str(input('Tente novamente. Quer continuar? [S/N] ')).strip().lower()[0]
+    continuar = str(input('Quer continuar? [S/N] ')).strip().lower()[0]  # Perguntando se o usuário deseja continuar, removendo todos os espaços à frente e à trás, jogando para minúsculo e pegando apenas a primeira letra
+    while continuar not in 'sn':  # Continuar o loop enquanto 'continuar' não for 's' ou 'n':
+        continuar = str(input('Tente novamente. Quer continuar? [S/N] ')).strip().lower()[0]  # Perguntando novamente
     
-    if continuar == 'n':
-        break
+    if continuar == 'n':  # Se 'continuar' for igual a 'n':
+        break  # Quebre o loop
 
-print(f'Você digitou {len(numeros)} elementos.')
-numeros.sort(reverse=True)
-print(f'Os valores em ordem decressente são {numeros}')
+print(f'Você digitou {len(numeros)} elementos.')  # Print o len de 'numeros'
+numeros.sort(reverse=True)  # Colocando 'numeros' em ordem decressente
+print(f'Os valores em ordem decressente são {numeros}')  # Mostrando 'numeros'
 
-if numeros.count(5) >= 1:
+if 5 in numeros:  # Se 5 estiver em 'numeros':
     print('O valor 5 faz parte da lista!')
-else:
+else:  # Se não:
     print('O valor 5 não foi encontrado na lista!')
