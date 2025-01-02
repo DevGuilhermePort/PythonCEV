@@ -19,6 +19,6 @@ print('')
 
 print(f"{'-' * 45}\nO jogador {jogador['nome']} jogou {jogos} partidas.")
 for count in range(0, jogos):  # Para cada "count" no range de zero à "jogos"
-    print(f" => Na partida {count}, fez {jogador['gols'][count]}.")
+    print(f" => Na partida {count + 1}, fez {jogador['gols'][count]}.")
 print(f"Foi um total de {jogador['total']} gols.")
 print("-" * 45)
