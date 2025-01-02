@@ -31,9 +31,9 @@ media = sum(p['idade'] for p in pessoas) / len(pessoas)
 
 print(f"B) A média de idade é de {media} anos.")
 
-mulheres = [for p['nome'] in pessoas if p['sexo'] == 'f']
-print(f"As mulheres cadastradas foram {', '.join(mulheres)}.")
+mulheres = [p['nome'] for p in pessoas if p['sexo'] == 'f']
 
+print(f"As mulheres cadastradas foram {', '.join(mulheres)}.")
 print("D) Lista de pessoas que estão acima da média:")
 for count in pessoas:
     if count['idade'] >= media:
