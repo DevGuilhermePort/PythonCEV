@@ -1,11 +1,13 @@
 partidas = []  # Criando a lista vazia "partidas"
-jogador = {}  # Criando o dicionário vazio "jogador"
+jogador = {
+    
+}  # Criando o dicionário vazio "jogador"
 
 jogador['nome'] = str(input("Nome: ")).strip().title()  # Criando a chave "nome" no dicionário
 jogos = int(input(f"Quantas partidas {jogador['nome']} jogou? "))  # Criando a variável "jogos"
 for count in range(0, jogos):  # Para cada "count" no range de zero à "jogos"
     partidas.append(int(input(f"Quantos gols na partida {count + 1}: ")))  # Adicionar na lista "partidas" o valor da entrada do usuário
-jogador['gols'] = partidas  # Criar a chave "gols" com o valor de "partida" no diconário "jogador"
+jogador['gols'] = partidas[:]  # Criar a chave "gols" com o valor de "partida" no diconário "jogador"
 jogador['total'] = sum(partidas)  # Criando a chave "total" com o valor da soma dos valores de "partidas" dentro de "jogador"
 
 print(f"{'-' * 45}\n{jogador}\n{'-' * 45}")
