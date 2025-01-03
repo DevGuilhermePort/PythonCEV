@@ -1,47 +1,45 @@
-time = []
 partidas = []
-jogador = {
+jogador = {}
+time = []
 
-}
 while True:
-    jogador.clear()
-    partidas.clear()
     jogador['nome'] = str(input("Nome: ")).strip().title()
-    jogos = int(input(f"Quantos jogos {jogador['nome']} jogou? "))
-    for jogo in range(0, jogos):
-        partidas.append(int(input(f"Quantos gols na partida {jogo + 1}? ")))
+    for jogos in range(0, int(input(f"Quantas partidas {jogador['nome']} jogou? "))):
+        partidas.append(int(input(f"Quantos gols na partida {jogos + 1}? ")))
     jogador['gols'] = partidas[:]
+    partidas.clear()
     jogador['total'] = sum(jogador['gols'])
     time.append(jogador.copy())
+    jogador.clear()
 
     while True:
-        continuar = str(input('Quer continuar? [S/N] ')).strip().lower()[0]
+        continuar = str(input("Quer continuar? [S/N] ")).strip().lower()[0]
         if continuar in 'sn':
             break
-        print("ERRO!!! Por favor, responda apenas com 'S' ou 'N'.")
+        print("ERRO!!! Por favor responda apenas com 'S' ou 'N'.")
     if continuar == 'n':
-        break
-
-print("-" * 40)
-print("cod", end='')
-for elemento in jogador.keys():
-    print(f"{elemento:<15}", end='')
+            break
+    
+print("-" * 60)
+print(f"{'Cod':>3}", end=' ')
+for key in time[0].keys():
+    print(f"{key:<25}", end=' ')
 print()
-
-print("-" * 40)
-for indicie, valor in enumerate(time):
-    print(f"{indicie:>3}", end='')
+for ind, valor in enumerate(time):
+    print(f"{ind:>3}", end=' ')
     for dado in valor.values():
-        print(f"{str(dado):<15}", end=' ')
+        print(f"{str(dado):<25}", end=' ')
     print()
-print("-" * 40)
+print("-" * 60)
 
 while True:
     busca = int(input("Mostrar dados de qual jogador? (999 interrompe) "))
     if busca == 999:
         break
-    if busca > len(time):
-        print(f"Não existe jogador com o código {busca}")
+    if busca >= len(time):
+        print("Erro! Não existe jogador com o código da busca.")
     else:
-        for indicie, valor in time[busca]['gols']:
-            print(f"No jogo {indicie + 1} fez {valor} gols.")
+        print(f"{'-=' * 3} Levantamento do jogador {time[busca]['nome']} {'-=' * 3}")
+        for indicie, gols in enumerate(time[busca]['gols']):
+            print(f"No jogo {indicie}, fez {gols} gols.")
+print("<<< FINALIZANDO >>>")
