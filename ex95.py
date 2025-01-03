@@ -42,5 +42,5 @@ while True:
         print(f"{'-=' * 3} Levantamento do jogador {time[busca]['nome']} {'-=' * 3}")
         for indicie, gols in enumerate(time[busca]['gols']):
             print("-" * 60)
-            print(f"No jogo {indicie}, fez {gols} gols.")
+        print(f"No jogo {indicie}, fez {gols} gols.")
 print("<<< FINALIZANDO >>>")
