@@ -10,4 +10,4 @@ def soma(a, b):  # Aqui definimos a função "soma" que recebe dois valores como
 soma(4, 5)  # Aqui chamamos a função antes definida "soma", e damos a ela os valores "4" como parâmetro "a" e "5" como parâmetro "b"
 soma(5, 5)  # Aqui chamamos a função e damos a ela "5" como ambos os parâmetros, "a" e "b"
 soma(b=10, a=7)  # Pode-se mudar a ordem definida deixando explicita a mudança quando a função é chamada
-''' "soma(5)" resultaria em um erro, pode que a função "soma()", no início do código foi declarada recebendo apenas dois parâmetros, não mais, e nem menor do que isso '''
+''' "soma(5)" resultaria em um erro, pode que a função "soma()", no início do código foi declarada recebendo apenas dois parâmetros, não mais, e nem menos do que isso '''
