@@ -1,5 +1,5 @@
 print(f'''Para usar cores é necessário ulizar \033[1;32m/n033[m\033[m
-Entre os COLCHETES e o M comoloca-se EX: 1; 30; 43
+Entre os COLCHETES e o M coloca-se EX: 1; 30; 43
 0 = nada
 \033[1m1 = negrito\033[m
 \033[4m4 = underline\033[m
