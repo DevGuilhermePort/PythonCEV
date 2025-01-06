@@ -5,12 +5,14 @@ def leiaInt(msg):   # Criando a função leiaInt() recebendo uma mensagem.
     : return: o número, caso ele seja um número realmente, e inteiro.
     __.__
     """
-    while True:
-        numero = str(input(msg))   
-        if numero.isnumeric():
-            return numero
-            break
-        else:
-            print("\033[1;31mERRO! Digite um número inteiro válido.\033[m")
+    while True:  # Loop while infinito:
+        numero = str(input(msg))  # criando a cariável numero fazendo uma pergunta ao usuário de acordo com a mensagem passada como parâmetro.
+        if numero.isnumeric():  # Se numero for um número:
+            return numero  # Retorne o valor de numero
+            break  # Quebre o loop
+        else:  # Se não for um número:
+            print("\033[1;31mERRO! Digite um número inteiro válido.\033[m")  # Falar ao usuário que o valor não foi válido.
 
-print(f"Você acabou de digitar o número {leiaInt("Digite um número: ")}")
+
+# Programa principal:
+print(f"Você acabou de digitar o número {leiaInt("Digite um número: ")}")  # Informando ao usuário qual número ele digitou e usando a f-string para chamar a função leiaInt() antes que a saída de dados aconteça.
