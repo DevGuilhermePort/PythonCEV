@@ -35,11 +35,12 @@ def moeda(num=0, moeda="R$"):
 
 
 def resumo(num=0, taxa_aumento=10, taxa_reducao=5):
-    print("-" * 30)
-    print(f"{"RESUMO DO VALOR":^30}")
-    print("-" * 30)
-    print(f"Preço analisado: \t{moeda(num)}.")
-    print(f"Dobro do preço: \t{dobro(num, True)}.")
-    print(f"Metade do preço: \t{metade(num, True)}")
-    print(f"Com {taxa_aumento}% de aumento fica \t{aumento(num, taxa_aumento, True)}")
-    print(f"Com {taxa_reducao}% de redução fica \t{reducao(num, taxa_reducao, True)}")
+    print("-" * 40)
+    print(f"{"RESUMO DO VALOR":^40}")
+    print("-" * 40)
+    print(f"{"Preço analisado:":<30}{moeda(num)}.")
+    print(f"{"Dobro do preço:":<30}{dobro(num, True)}.")
+    print(f"{"Metade do preço:":<30}{metade(num, True)}")
+    print(f"{f"Com {taxa_aumento}% de aumento fica":<30}{aumento(num, taxa_aumento, True)}")
+    print(f"{f"Com {taxa_reducao}% de redução fica":<30}{reducao(num, taxa_reducao, True)}")
+    print("-" * 40)
