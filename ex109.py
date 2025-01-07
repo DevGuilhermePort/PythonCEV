@@ -1,6 +1,6 @@
 from pacote import moedas
 
-num = int(input("Digite um preço: R$"))
+num = float(input("Digite um preço: R$"))
 
 print(f"A metade de {moedas.moeda(num)} é {moedas.metade(num, True)}.")
 print(f"O dobro de {moedas.moeda(num)} é {moedas.dobro(num, True)}.")
