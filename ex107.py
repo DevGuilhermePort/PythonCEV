@@ -1,4 +1,4 @@
-from pacote import moedas  # Importando o módulo moedas do pacote pacote.
+from utilidadescev import moedas  # Importando o módulo moedas do pacote pacote.
 
 numero = float(input("Digite o preço: R$"))  # Perguntando um valor ao usuário
 

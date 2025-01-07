@@ -1,4 +1,4 @@
-from pacote import moedas
+from utilidadescev import moedas
 
 num = float(input("Digite um preço: R$"))
 
