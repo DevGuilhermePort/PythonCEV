@@ -12,3 +12,6 @@ def aumentar(num, aumento):
 
 def diminuir(num, reducao):
     return num - (num * (reducao / 100))
+
+def moeda(num):
+    return f"R${num:.2f}"
