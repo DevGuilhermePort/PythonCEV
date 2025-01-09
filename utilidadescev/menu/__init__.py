@@ -10,6 +10,7 @@ def cabecalho(msg):
 
 def menu(lista):
     from utilidadescev.dado import leiaInt
+    
     cabecalho("MENU PRINCIPAL")
     for ind, valor in enumerate(lista):
         print(f"\033[33m{ind:<5}\033[m{"-":<5}\033[34m{valor}\033[m")
