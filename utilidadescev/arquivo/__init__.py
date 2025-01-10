@@ -27,4 +27,23 @@ def lerArquivo(nome):
         from utilidadescev.menu import cabecalho
 
         cabecalho("PESSOAS CADASTRADAS")
-        print(a.read())
+        for linha in a:
+            dado = linha.split(";")
+            dado[1] = dado[1].replace("\n", "")
+            print(f"\033[36m{dado[0]:<30}\033[35m{dado[1]:>3} anos.\033[m")
+    finally:
+        a.close()
+
+def cadastrar(arq, nome="<DESCONHECIDO>", idade=0):
+    try:
+        a = open(arq, "at")
+    except:
+        print("Houve um erro na abertura do arquivo.")
+    else:
+        try:
+            a.write(f"{nome};{idade}\n")
+        except:
+            print("Houve um erro na hora de ESCREVER os dados.")
+        else:
+            print(f"Novo registro de {nome} adicionado")
+            a.close()

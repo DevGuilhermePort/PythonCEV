@@ -13,7 +13,7 @@ def menu(lista):
     
     cabecalho("MENU PRINCIPAL")
     for ind, valor in enumerate(lista):
-        print(f"\033[33m{ind:<5}\033[m{"-":<5}\033[34m{valor}\033[m")
+        print(f"\033[33m{ind + 1:<5}\033[m{"-":<5}\033[34m{valor}\033[m")
     print(linha())
     opc = leiaInt("\033[32mSua opção: \033[m")
     return opc
